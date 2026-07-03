@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- HTML Table, Lists
+         HTML Blocks, Video, Audio, YouTube, Google maps
+         HTML Forms, Input attributes, New Elements, Semantics 
+    --><h2>HTML Table Example:</h2>
+         <table border="1" style="border-collapse: collapse;"> <!-- creating a table with border(kufizim) -->
+            <!-- border-collapse:collapse(largon kufizimet(border) e dyfishta) -->
+                <tr> <!-- creating a row in the table -->
+                    <th>Emri</th> <!-- creating a header in the table -->
+                    <th>Mosha</th>
+                    <th>Qyteti</th>
+                </tr>
+                <tr>
+                    <td>Ardi</td> <!-- creating a data cell in the table -->
+                    <td>16</td>
+                    <td>Prizren</td>
+                </tr>
+        </table>
+        <br>
+        <h2>Colspan and Rowspan Example:</h2>
+            <table border="1">
+                <tr>
+                    <!-- colspan bashkon 2 kolona -->
+                    <th colspan="2">Emrat</th>
+                </tr>
+                <tr>
+                    <td>Ardi</td>
+                    <td>Era</td>
+                </tr>
+                <tr>
+                    <!-- rowspan bashkon 2 rreshta -->
+                    <td rowspan="2">Besnik</td>
+                    <td>Alba</td>
+                </tr>
+                <tr>
+                    <td>Dion</td>
+                </tr>
+            </table>
+            <h2>HTML Lists Example:</h2>
+            <h3>Ordered List:</h3>
+            <ol> <!-- Listat qe numërohen -->
+                <li>HTML</li>
+                <li>CSS</li>
+                <li>JavaScript</li>
+            </ol>
+            <h3>Unordered List:</h3>
+            <ul> <!-- Listat qe nuk numërohen -->
+                <li>HTML</li>
+                <li>CSS</li>
+                <li>JavaScript</li>
+            </ul>
+            <h3>Description List</h3>
+            <dl>
+                <dt>HTML</dt> <!-- termi qe do te pershkruhet -->
+                <dd>Gjuhë për strukturë të web-it</dd> <!-- pershkrimi i termit -->
+
+                <dt>CSS</dt>
+                <dd>Gjuhë për dizajn</dd>
+
+                <dt>JavaScript</dt>
+                <dd>Gjuhë për funksionalitet</dd>
+            </dl>
+            <h2>HTML Block Elements Example:</h2><!-- Block elements:jane ato elemente qe cdo here dalin rresht tjeter -->
+                <div>Ky është div</div> <!-- div eshte nje container(blok) i pergjithshem -->
+                <p>Ky është paragraf</p>
+                <p>Ky është paragraf</p>
+                <h1>Titull</h1>
+                <h2>Titull</h2>
+            <h2>HTML Inline Elements Example:</h2> <!-- Inline elements: jane ato elemente qe dalin ne nje rresht  -->
+                <span>Span element</span> <!-- span eshte kur duhet me specifiku nje pjese te fjalis  -->
+                <a href="#">Link</a>
+                <a href="#">Link 2</a>
+                <b>Bold</b>
+<hr>
+            <h2>HTML Video Example:</h2>
+            <!--https://ytmp3.ai/,per me download video ose audio-->
+            <!--Atribute të rëndësishme:controls,,autoplay,loop,muted-->
+                <video width="320" height="240" controls ><!-- controls per te shfaqur kontrollet e videos -->
+                    <source src="video.mp4" type="video/mp4">
+                </video>
+            <h2>HTML Audio Example:</h2>
+                <audio controls> 
+                    <source src="audio.mp3" type="audio/mpeg">
+                </audio>
+            <h2>HTML YouTube Embed Example:(duhet live server me hap)</h2>
+            <iframe width="560" height="315"
+                src="https://www.youtube.com/embed/dQw4w9WgXcQ"
+                allowfullscreen>
+            </iframe>
+                    <iframe width="975" height="548" src="https://www.youtube.com/embed/Da0_NKj0_Q8" title="PRIZREN | KOSOVO | 4K | 60 FPS" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+            <h2>HTML Google Maps Embed Example:</h2>
+            <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2955.1798669354985!2d20.740450211137084!3d42.21060024441174!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1353958ac968deeb%3A0x58186dae9aa97973!2sAmerican%20Corner%20Prizren!5e0!3m2!1sen!2s!4v1769645434335!5m2!1sen!2s"
+                width="600"
+                height="450"
+                style="border:0;"
+                allowfullscreen=""
+                loading="lazy">
+            </iframe>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2955.1798669354985!2d20.740450211137084!3d42.21060024441174!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1353958ac968deeb%3A0x58186dae9aa97973!2sAmerican%20Corner%20Prizren!5e0!3m2!1sen!2s!4v1769780277506!5m2!1sen!2s" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            
+</body>
+</html>

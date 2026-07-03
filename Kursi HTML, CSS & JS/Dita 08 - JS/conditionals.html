@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conditionals</title>
+</head>
+<body>
+    <script>
+        let a=prompt('Sheno piket (Deshtuar apo jo)');
+        //var a = 50;
+
+        if(a>49)// brenda kllapave te vogla shenohet kushti
+        {           //Ndersa brenda kllapave te medhaja shenohet blloku i kodit nese kushti plotesohet apo eshte i vertet
+            document.write("Ju keni kaluar!");
+        }
+        else    // Perdoret per te ekzekutuar nje kode nese kushti paraprak eshte false (nuk eshte i vertet)
+        {       //Brenda kllapave shenohet blloku i kodit nese kushti nuk eshte i sakte
+            document.write("Keni deshtuar");
+        }
+    </script>
+    <br>
+    <hr>
+    <script>
+        let x=prompt('Sheno piket');
+
+        if(x<40)
+        {
+            document.write("Nota 1");
+        }
+        else if(x>39 && x<55)
+        {
+            document.write("Nota 2");
+        }
+        else if(x>56 && x<70)
+        {
+            document.write("Nota 3");
+        }
+        else if(x>69 && x<80)
+        {
+            document.write("Nota 4");
+        }
+        else if(x>=80)
+        {
+            document.write("Nota 5");
+        }
+        else{
+            document.write("Abstenim");
+        }
+    </script>
+
+    <h2>Switch Statement</h2>
+    <script>
+        let day = prompt("Sheno diten e javes (1-7): ");
+
+        switch (day) {
+            case "1":
+                document.write("E Hënë");
+                break;
+            case "2":
+                document.write("E Martë");
+                break;
+            case "3":
+                document.write("E Mërkurë");
+                break;
+            case "4":
+                document.write("E Enjte");
+                break;
+            case "5":
+                document.write("E Premte");
+                break;
+            case "6":
+                document.write("E Shtunë");
+                break;
+            case "7":
+                document.write("E Diel");
+                break;
+            default:
+                document.write("Dita e pavlefshme");
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,287 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    font-family: 'Ubuntu', sans-serif;
+}
+
+#desktop {
+    height: calc(100vh - 48px);
+    background-image: url("wallpaper.png");
+    background-size: cover;
+}
+
+#taskbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    height:48px;
+    position: fixed;
+    bottom: 0;
+    background-color: rgb(26, 0, 39);
+    z-index: 1000;
+}
+
+#start-btn {
+    padding: 1rem;
+    background-image: url("logo.png");
+    background-size: cover;
+    cursor: pointer;
+    margin-left: 4px;
+}
+
+#start-btn:hover {
+    filter: brightness(0.75);
+}
+
+#clock {
+    color: #fff;
+    padding: 0.1rem;
+    font-size: 14px;
+    margin-right: 4px;
+}
+
+.window {
+    position: absolute;
+    width: 320px;
+    background: rgb(46, 0, 67);
+    border-radius: 4px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4);
+    overflow: hidden;
+    top: 100px;
+    left: 100px;
+}
+
+.window-titlebar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: rgba(0, 0, 0, 0.45);
+    padding-left: 12px;
+    padding-right: 12px;
+    height: 36px;
+    cursor: grab;
+}
+
+.window-title {
+    color: #eee;
+    font-size: 13px;
+}
+
+.window-close {
+    border: none;
+    background: none;
+    background-color: #4e006d;
+    cursor: pointer;
+    width: 20px;
+    height: 20px;
+    border-radius: 25%;
+    font-size: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+}
+
+.window-content {
+    padding: 0.01rem;
+    height: auto;
+}
+
+.taskbar-icon {
+    border: none;
+    background: rgb(54, 0, 82);
+    color:  #ddd;
+    padding: 0 4px;
+    cursor: pointer;
+    border-radius: 4px;
+    width: 40px;
+    height: 40px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    border: none;
+}
+
+.calc {
+    background-image: url("calc.png");
+}
+
+.calc:hover {
+    filter: brightness(0.75);
+}
+
+.notepad {
+    background-image: url("notepad.png");
+}
+
+.notepad:hover {
+    filter: brightness(0.75);
+}
+
+.clock {
+    background-image: url("clock.png");
+}
+
+.clock:hover {
+    filter: brightness(0.75);
+}
+
+#calc-display {
+    background-color: #1e0026;
+    color: #ddd;
+    text-align: right;
+    padding: 0.5rem;
+    font-size: 28px;
+    width: 100%;
+}
+
+#calc-buttons {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 4px;
+    padding: 0.1rem;
+}
+
+.calc-btn {
+    background-color: #777;
+    color: #ddd;
+    font-size: 16px;
+    padding: 16px; 
+    border: none;
+    cursor: pointer;
+    border-radius: 3px;
+}
+
+.calc-btn-operator {
+    background-color: rgb(172, 112, 0);
+}
+
+.calc-btn-clear {
+    background-color: darkred;
+}
+
+.calc-btn-zero {
+    grid-column: span 2;
+}
+
+#notepad-area {
+    width: 100%;
+    height: 300px;
+    resize: none;
+    border: none;
+    outline: none;
+    background-color: #222;
+    color: #ddd;
+    padding: 0.2rem;
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 14px;
+}
+
+#clock-display {
+    text-align: center;
+    font-size: 48px;
+    color: #ddd;
+    padding: 1rem;
+}
+
+#chat-messages {
+    height: 250px;
+    overflow-y: auto;
+    background-color: rgb(46, 0, 67);
+    padding: 0.2rem;
+    display: flex;
+    flex-direction: column;
+}
+
+#chat-input-area {
+    display: flex;
+    padding: 8px;
+    background-color:rgb(36, 0, 47);
+}
+
+#chat-input {
+    flex: 1;
+    padding: 8px;
+    border: none;
+    outline: none;
+    background-color: rgb(43, 0, 63);
+    color: #ddd;
+    font-family: 'Ubuntu', sans-serif;
+    border-radius: 4px;
+}
+
+#chat-send {
+    margin-left: 8px;
+    padding: 8px 12px;
+    border: none;
+    cursor: pointer;
+    background-color: rgb(68, 0, 99);
+    color: #ddd;
+    border-radius: 4px;
+}
+
+.chat-msg-user {
+    max-width: 80%;
+    padding: 8px 12px;
+    border-radius: 12px;
+    margin: 4px 0;
+    font-size: 13px;
+    align-self: flex-end;
+    background-color: rgb(32, 0, 46);
+    color: #eee;
+}
+
+.chat-msg-bot {
+    max-width: 80%;
+    padding: 8px 12px;
+    border-radius: 12px;
+    margin: 4px 0;
+    font-size: 13px;
+    align-self: flex-start;
+    background-color: rgb(68, 0, 102);
+    color: #eee;
+}
+
+#start-menu {
+    position: fixed;
+    bottom: 48px;
+    left: 0;
+    background-color: rgb(59, 0, 88);
+    width: 190px;
+    padding: 6px;
+    border-radius: 0 8px 0 0;
+    display: none;
+    z-index: 999;
+}
+
+.start-menu-item {
+    display: flex;
+    align-items: center;
+    padding: 8px;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+.start-menu-item:hover{
+    filter: brightness(0.75);
+}
+
+.start-menu-icon {
+    margin-right: 8px;
+    font-size: 18px;
+}
+
+.start-menu-label {
+    color: #ddd;
+    font-size: 14px;
+}

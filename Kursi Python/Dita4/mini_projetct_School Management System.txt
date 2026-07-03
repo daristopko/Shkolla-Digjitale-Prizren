@@ -1,0 +1,24 @@
+MINI PROJEKT: School Management System
+Përshkrimi i detyrës
+
+Nxënësit duhet të krijojnë një sistem të thjeshtë për shkollë.
+
+Duhet të përfshihen:
+
+1. Class Student
+emri
+mbiemri
+mosha
+nota
+
+ 2. Method info()
+shfaq të gjitha të dhënat e studentit
+
+3. Method result()
+nëse nota >= 5 → “Kaloi”
+nëse nota < 5 → “Nuk kaloi”
+
+4. Krijo 3 studentë
+me të dhëna të ndryshme
+
+5. Shfaq informacionin dhe rezultatin për secilin

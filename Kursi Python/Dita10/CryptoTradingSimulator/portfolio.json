@@ -1,0 +1,28 @@
+{
+  "cash": 10000.0,
+  "holdings": {
+    "bitcoin": 0.0,
+    "ethereum": 0.0,
+    "solana": 0.0,
+    "cardano": 0.0
+  },
+  "watchlist": [
+    "bitcoin",
+    "ethereum"
+  ],
+  "trades": [],
+  "price_history": {
+    "bitcoin": [
+      62697.061
+    ],
+    "ethereum": [
+      3678.3878
+    ],
+    "solana": [
+      165.1512
+    ],
+    "cardano": [
+      0.6759
+    ]
+  }
+}

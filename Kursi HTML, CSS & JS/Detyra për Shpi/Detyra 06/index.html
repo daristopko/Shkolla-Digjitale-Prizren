@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Detyrat - Numrat</title>
+</head>
+<body>
+    <h1>Rezultatet e detyrave</h1>
+    <div id="result1"></div>
+    <div id="result2"></div>
+    <div id="result3"></div>
+
+    <script>
+        // Detyra 1 – Numri çift apo tek
+        function checkEvenOdd(num) {
+            if (num % 2 === 0) {
+                return "Numri është çift";
+            } else {
+                return "Numri është tek";
+            }
+        }
+
+        let num1 = prompt("Detyra 1: Shkruani një numër:");
+        if (num1 !== null) {
+            num1 = Number(num1);
+            if (!isNaN(num1)) {
+                document.getElementById("result1").innerText = "Detyra 1: " + checkEvenOdd(num1);
+            } else {
+                document.getElementById("result1").innerText = "Detyra 1: Nuk keni futur një numër të vlefshëm.";
+            }
+        } else {
+            document.getElementById("result1").innerText = "Detyra 1: Anuluar nga përdoruesi.";
+        }
+
+        // Detyra 2 – Numri pozitiv, negativ apo zero
+        function checkSign(num) {
+            if (num > 0) {
+                return "Numri është pozitiv";
+            } else if (num < 0) {
+                return "Numri është negativ";
+            } else {
+                return "Numri është zero";
+            }
+        }
+
+        let num2 = prompt("Detyra 2: Shkruani një numër:");
+        if (num2 !== null) {
+            num2 = Number(num2);
+            if (!isNaN(num2)) {
+                document.getElementById("result2").innerText = "Detyra 2: " + checkSign(num2);
+            } else {
+                document.getElementById("result2").innerText = "Detyra 2: Nuk keni futur një numër të vlefshëm.";
+            }
+        } else {
+            document.getElementById("result2").innerText = "Detyra 2: Anuluar nga përdoruesi.";
+        }
+
+        // Detyra 3 – Gjej numrin më të madh nga tre vlera
+        function findMax(a, b, c) {
+            let max = a;
+            if (b > max) max = b;
+            if (c > max) max = c;
+            return max;
+        }
+
+        let inputs = [];
+        for (let i = 1; i <= 3; i++) {
+            let val = prompt(`Detyra 3: Shkruani numrin ${i}:`);
+            if (val === null) {
+                inputs = null;
+                break;
+            }
+            val = Number(val);
+            if (isNaN(val)) {
+                alert(`Vlera "${val}" nuk është numër. Provo përsëri.`);
+                i--; // repeat this input
+            } else {
+                inputs.push(val);
+            }
+        }
+
+        if (inputs && inputs.length === 3) {
+            let max = findMax(inputs[0], inputs[1], inputs[2]);
+            document.getElementById("result3").innerText = `Detyra 3: Numri më i madh është ${max}.`;
+        } else {
+            document.getElementById("result3").innerText = "Detyra 3: Anuluar ose input i pavlefshëm.";
+        }
+    </script>
+</body>
+</html>

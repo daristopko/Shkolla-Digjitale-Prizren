@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Loop Example</title>
+    </head>
+    <body>
+        <h2>While Loop Example</h2>
+        <script>
+            // While loop eshte nje strukture kontrolli qe perseritet derisa nje kusht te jete i vertete.
+            // Ne kete shembull, do te printojme numrat nga 1 deri ne 5.
+            let count = 1;
+            let output = "";
+
+            while (count <= 5) { // Nese kushti plotesohet, kodi brenda while loop do te ekzekutohet
+                output += count;
+                count++;
+            }
+
+            document.write("While Loop: " + output);
+        </script>
+
+        <h2>While Loop - Shuma e numrave 1 deri 5</h2>
+        <p id="whileOutput"></p>
+
+        <script>
+            let count1 = 1;
+            let sum = 0;
+
+            while (count1 <= 5) {
+                sum += count1;
+                count1++;
+            }
+
+            document.getElementById("whileOutput").innerHTML =
+            "Shuma: " + sum;
+        </script>
+
+        <h2>Do while Loop Example</h2>
+
+        <script>
+            // Do while loop eshte nje strukture kontrolli qe perseritet te pakten nje here, dhe vazhdon te perseritet derisa nje kusht te jete i vertete.
+            let i = 1;
+            let doWhileText = "";
+            do {
+                doWhileText += i + " ";
+                i++;
+            } while (i <= 5);
+            document.write(doWhileText);
+        </script>
+
+        <h2>For Loop Example</h2>
+        <script>
+            // For Loop i ka gjithsejt 3 statement, ku te gjithe i caktojme brenda kllapave te For.
+            let x = "";
+            // 1. Deklarimi i variablit (let i = 1), 2. Kushti (i <= 5), 3. Inkrementimi (i++)
+            for (let i = 1; i <= 10; i++) {
+                x += i + " ";
+            }
+            document.write("For Loop: " + x);
+        </script>
+
+        <h2>For Loop – Numrat 1 deri 10</h2>
+        <p id="forOutput"></p>
+        <script>
+            let text = "";
+            for (let i = 1; i <= 10; i++) {
+                text += i + " ";
+            }
+            document.getElementById("forOutput").innerHTML = text;
+        </script>
+    </body>
+</html>

@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dita 5 CSS Basics</title>
+
+    <style>/*Internal Css*/
+
+        #pp {
+            color: blue;
+            font-size: 20px;
+        }
+        .internal {
+            color: purple;
+            font-size: 18px;
+        }
+    </style>
+
+    <link rel="icon" href="picture1.png" type="image/x-icon"><!--Favicon per faqen-->
+    
+    <link rel="stylesheet" href="dita4.css"><!--External Css-->
+    
+    <!--Font Awesome CDN që përfshin Solid ikona-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"/> <!-- Font Awesome CDN që përfshin Brands ikona -->
+
+    <!--GoogleFonts-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playwrite+NZ+Basic+Guides&display=swap" rel="stylesheet">
+</head>
+<body>
+    <h1>Css Syntax</h1>
+
+    <h2>Inline Css</h2>
+    <p style="color: blue; font-size: 20px;">This is a text with inline CSS style.</p> <!-- Inline Css -->
+    <h4 style="color: green; font-size: 15px;">This is a heading with inline CSS style.</h4> <!-- Inline Css -->
+
+    <h2>Internal Css</h2>
+    <p id="pp">This is a paragraph with an ID.</p>
+    <p class="internal">This is a text with internal CSS style.</p>
+    <h2 class="internal">This is a heading with internal CSS style.</h2>
+    <!--id(#) = per nje element , class(.) = per shume elemente-->
+    
+    <h2>External Css</h2>
+    <p id="pid">This is a text with CSS style.</p>
+    <p id="pid1">This is a text with CSS style.</p>
+
+    <p class="pclass">This is another text with CSS style.</p>
+    <p class="pclass">This is another text with CSS style.</p>
+    <p class="pclass">This is another text with CSS style.</p>
+    
+    <h2>Css Color</h2>
+    <p style="color: rgb(242, 121, 121);">This text is red.</p><!--Color Name-->
+    <p style="color: rgb(0, 0, 255);">This text is blue using RGB code.</p><!--RGB Code perfshin prej 0 deri 255 dhe na jep 16.7 milion nuanca-->
+    <p style="color:rgba(0, 0, 255,0.5)">This text is blue with transparency using RGBA code.</p><!--RGBA Code perfshin prej 0 deri 255 dhe transparencen prej 0 deri 1-->
+    <p style="color: #00FF00;">This text is green using HEX code.</p><!--Hex Code perfshin prej A deri F dhe prej 0 deri 9-->
+
+<hr style="height: 5px;background-color: red;"><!--Hr per vijen horizontale-->
+
+    <h2>Css Background</h2>
+    <div style="background-color: yellow;width: 300px; height: 100px;"><!--background-color per ngjyrosjen e prapavijes-->
+        <p>This div has a yellow background color.</p>
+    </div>
+    <div style="background-image: url('picture1.png');background-size: 300px 120px;width: 300px; height: 100px;"><!--background-image per te vendosur nje imazh si prapavije-->
+        <!--background-size per madhesine e imazhit te prapavijes vlera e pare X dhe vlera e dyte Y-->
+        <p style="color:white">This div has a background image.</p>
+    </div>
+
+    <h2>Css Border</h2><!--stilet:dotted ,dashed, solid,double, groove ,inset ,outset ,none ,hidden,border-left,border-right,border-bottom,border-top -->
+    <div style="border: 5px solid red; width: 300px; height: 100px;"><!--border: trashesia lloji ngjyra-->
+        <p>This div has a solid red border.</p>
+    </div>
+    <br><br>
+    <div style="border: 3px dashed blue; width: 300px; height: 100px;"><!--border: trashesia lloji ngjyra-->
+        <p>This div has a dashed blue border.</p>
+    </div>
+    <br></br>
+    <div style="border: 3px double green; width: 300px; height: 100px;"><!--border: trashesia lloji ngjyra-->
+        <p>This div has a dashed blue border.</p>
+    </div>
+
+     <h2>Css Margin and Padding</h2>
+    <section style="background-color: lightgray; width: 300px; height: 100px; margin: 20px 20px 20px 50px"><!--margin largesia nga jasht vlera e pare top, e dyte right, e trete bottom, e katerta left-->
+        <p>This section has margin.</p>
+    </section>
+    <!--
+    <img src="picture1.png" alt="Example Image" style="width: 200px; height: 200px;">
+    <img src="picture1.png" alt="Example Image" style="width: 200px; height: 200px;">
+    -->
+    <section style="background-color: lightblue; width: 300px; height: 100px; padding: 20px 20px 20px 50px"><!--padding largesia nga brenda(rritet edhe height) vlera e pare top, e dyte right, e trete bottom, e katerta left-->
+        <p>This section has padding.</p>
+    </section>
+
+    <h2>Css Box Model</h2>
+    <div class="divbox">
+        <p>This div demonstrates the Box Model.</p> <!--Content-->
+    </div>
+
+<hr style="height: 5px;background-color: red;"><!--Hr per vijen horizontale-->
+
+    <h2>Css Text and Fonts</h2>
+    <p style="text-align: right;">This text is right-aligned.</p><!--text-align: left, center, right, justify-->
+    <p style="text-decoration: underline; color: purple;">This text is underlined and purple.</p><!--text-decoration: none, underline, overline, line-through-->
+    
+    <p style="font-family: georgia; font-size: 18px; color: brown;">This text uses Georgia font, size 18px, and brown color.</p><!--font-family per llojin e fontit, font-size per madhesine e fontit-->
+    <p class="pgfonts">Paragraf with google fonts</p><!--GoogleFontsEmbeded-->
+    <a href="https://www.example.com" style="color: orange; text-decoration: none;">Visit Example.com</a>
+
+    <h2>Css Icons</h2><!--https://fontawesome.com/-->
+    <p>Icons can also be used with emojis:</p>
+    <i class="fa-brands fa-facebook"></i>
+    <i class="fa-brands fa-instagram"></i>
+    <i class="fa-solid fa-envelope" style="color: #0a57db;"></i>
+    
+    <h2>Css Links</h2>
+    <p><a href="default.asp" target="_blank" class="a1">This is a link</a></p>
+</body>
+</html>

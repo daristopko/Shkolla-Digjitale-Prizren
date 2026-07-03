@@ -1,0 +1,12 @@
+__pycache__/
+*.py[cod]
+
+.env
+.env.*
+
+*.db
+*.sqlite
+*.sqlite3
+
+instagram_session.json
+media/

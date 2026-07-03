@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="sq">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Detyra BMI</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      background-color: #2c4f8c;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      font-family: Arial, sans-serif;
+    }
+
+    .card {
+      background-color: #ffffff;
+      border-radius: 20px;
+      padding: 50px 60px;
+      text-align: center;
+      min-width: 400px;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.2);
+    }
+
+    .card h1 {
+      color: #2c4f8c;
+      font-size: 2rem;
+      margin-bottom: 20px;
+    }
+
+    .card p {
+      font-weight: bold;
+      font-size: 1.1rem;
+      margin-bottom: 16px;
+      color: #111;
+    }
+
+    .category {
+      display: inline-block;
+      width: 100%;
+      padding: 12px 0;
+      border-radius: 8px;
+      font-weight: bold;
+      font-size: 1.1rem;
+    }
+
+    /* stili për mesazhin e gabimit */
+    .gabim {
+      background-color: #fca5a5;
+      color: #7f1d1d;
+    }
+
+    .nenpeshe {
+      background-color: #add8e6;
+      color: #00008b;
+    }
+
+    .normal {
+      background-color: #90ee90;
+      color: #006400;
+    }
+
+    .mbipeshe {
+      background-color: #fef08a;
+      color: #92400e;
+    }
+
+    .obezitet {
+      background-color: #fca5a5;
+      color: #7f1d1d;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="card">
+    <h1>Llogaritja e BMI</h1>
+    <p id="rezultati">BMI: --</p>
+    <div id="kategoria" class="category"></div>
+  </div>
+
+  <script>
+    let pesha = parseFloat(prompt("Shkruaj peshën në kilogram (p.sh 70):"));
+    let gjatesia = parseFloat(prompt("Shkruaj gjatësinë në metra (p.sh 1.75):"));
+
+    let kategoriaEl = document.getElementById("kategoria");
+
+    // isNaN() kontrollon nëse vlera nuk është numër (p.sh nëse përdoruesi shkruan shkronja ose nuk shkruan asgjë)
+    // pesha <= 0 dhe gjatesia <= 0 kontrollojnë nëse numri është negativ ose zero, që nuk ka kuptim
+    if (isNaN(pesha) || isNaN(gjatesia) || pesha <= 0 || gjatesia <= 0) {
+      document.getElementById("rezultati").textContent = "BMI: --";
+      kategoriaEl.textContent = "Ju i keni shënuar gabim vlerat.";
+      kategoriaEl.className = "category gabim"; // aplikon stilin e kuq të gabimit
+    } else {
+      // nëse të dhënat janë të sakta, vazhdon me llogaritjen normale
+      let bmi = pesha / (gjatesia * gjatesia);
+      bmi = bmi.toFixed(2);
+
+      document.getElementById("rezultati").textContent = "BMI: " + bmi;
+
+      if (bmi < 18.5) {
+        kategoriaEl.textContent = "Nënpeshë";
+        kategoriaEl.className = "category nenpeshe";
+      } else if (bmi < 25) {
+        kategoriaEl.textContent = "Normal";
+        kategoriaEl.className = "category normal";
+      } else if (bmi < 30) {
+        kategoriaEl.textContent = "Mbipeshë";
+        kategoriaEl.className = "category mbipeshe";
+      } else {
+        kategoriaEl.textContent = "Obezitet";
+        kategoriaEl.className = "category obezitet";
+      }
+    }
+  </script>
+
+</body>
+</html>

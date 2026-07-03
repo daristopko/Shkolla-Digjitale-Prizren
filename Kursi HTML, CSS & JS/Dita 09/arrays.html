@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arrays Example</title>
+</head>
+<body>
+    <h1>Arrays</h1>
+
+    <h2>Shembull 1</h2>
+    <p id="arrayOutput"></p>
+    <script>
+        let firstName = "Daris";
+                    // 0   1   2   3
+        let numbers = [10, 20, 30, 40];
+        document.write("Numrat ne array: " + numbers);
+
+        document.write("<br>Numri i pare ne array: " + numbers[0]); // 10
+        document.write("<br>Numri i fundit ne array: " + numbers[numbers.length-1]); // 40
+
+        document.write("<br>Numri i elementeve ne array: " + numbers.length);
+
+        let text = "";
+        for (let i = 0; i < numbers.length; i++) {
+            text += numbers[i] + " ";
+        }
+        document.getElementById("arrayOutput").innerHTML =
+            text;
+    </script>
+
+    <h2>Shembull 2</h2>
+    <p id="averageOutput"></p>
+
+    <script>
+        let grades = [7, 8, 9, 10, 6];
+        let total = 0;
+
+        for (let i = 0; i < grades.length; i++) {
+            total += grades[i];
+        }
+
+        let average = total / grades.length;
+        document.getElementById("averageOutput").innerHTML = "Mesatarja e notave eshte: " + average;
+    </script>
+</body>
+</html>

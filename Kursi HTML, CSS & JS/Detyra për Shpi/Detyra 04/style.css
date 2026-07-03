@@ -1,0 +1,39 @@
+.animatedbox {
+    width: 75px;
+    height: 75px;
+    background: rgb(255, 0, 0);
+    position: relative;
+    animation: move 4s infinite alternate;
+    margin: 40px auto;
+}
+
+.animatedbox:hover {
+     animation-play-state:paused;
+}
+
+@keyframes move {
+    0% {
+        transform: translate(0, 0);
+        background-color: red;
+    }
+
+    25% {
+        transform: translate(0, 200px);
+        background-color: green;
+    }
+
+    50% {
+        transform: translate(200px, 200px);
+        background-color: blue;
+    }
+
+    75% {
+        transform: translate(200px, 0);
+        background-color: yellow;
+    }
+
+    100% {
+        transform: translate(0, 0);
+        background-color: red;
+    }
+}

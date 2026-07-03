@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="sq">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Operatorët në JavaScript</title>
+  </head>
+  <body>
+    <h2>Operatorët Percaktues (Assignment)</h2>
+
+    <script>
+      let x = 10;
+      const a = 15;
+
+      document.write("Vlera fillestare e x: " + x + "<br>");
+      document.write("x + a = " + (x + a) + "<br><br>");
+
+      x += 5; // x = x + 5
+      document.write("x += 5 → " + x + "<br>");
+
+      x -= 5;
+      document.write("x -= 5 → " + x + "<br>");
+
+      x *= 2;
+      document.write("x *= 2 → " + x + "<br>");
+
+      x /= 2;
+      document.write("x /= 2 → " + x + "<br><br>");
+    </script>
+
+    <h2>Operatorët Aritmetik</h2>
+
+    <script>
+      let num1 = "24";
+      let num2 = "10";
+
+      document.write('"24" + "10" = ' + (num1 + num2) + "<br>");
+      document.write('"24" * "10" = ' + (num1 * num2) + "<br>");
+      document.write('"24" / "10" = ' + (num1 / num2) + "<br>");
+      document.write('"24" % "10" = ' + (num1 % num2) + "<br>");
+
+      let n = 5;
+      n++;
+      document.write("Increment (n++): " + n + "<br>");
+
+      n--;
+      document.write("Decrement (n--): " + n + "<br><br>");
+    </script>
+
+    <h2>Operatorët Krahasues</h2>
+
+    <script>
+      const v1 = 20;
+      const v2 = "20";
+
+      document.write("20 == '20' → " + (v1 == v2) + "<br>");
+      document.write("20 === '20' → " + (v1 === v2) + "<br>");
+      document.write("20 != '20' → " + (v1 != v2) + "<br>");
+      document.write("20 !== '20' → " + (v1 !== v2) + "<br>");
+      document.write("20 > 15 → " + (v1 > 15) + "<br>");
+      document.write("20 < 15 → " + (v1 < 15) + "<br><br>");
+    </script>
+
+    <h2>Operatorët Logjik</h2>
+
+    <script>
+      const a1 = 10;
+      const a2 = 3;
+
+      document.write("(10 < 20 && 3 > 1) → " + (a1 < 20 && a2 > 1) + "<br>");
+      document.write("(10 < 20 && 3 < 1) → " + (a1 < 20 && a2 < 1) + "<br>");
+
+      document.write("(10 < 20 || 3 < 1) → " + (a1 < 20 || a2 < 1) + "<br>");
+
+      document.write("!(10 === 3) → " + !(a1 === a2) + "<br><br>");
+    </script>
+
+    <h2>Operatori String</h2>
+
+    <script>
+      const s1 = 10;
+      const s2 = "3";
+      const s3 = 10;
+
+      document.write("10 + '3' = " + (s1 + s2) + "<br>");
+      document.write("10 + '3' + 10 = " + (s1 + s2 + s3) + "<br>");
+      document.write("10 + 10 + '3' = " + (s1 + s3 + s2) + "<br>");
+    </script>
+  </body>
+</html>

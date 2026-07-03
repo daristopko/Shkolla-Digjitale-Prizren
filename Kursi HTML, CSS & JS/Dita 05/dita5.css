@@ -1,0 +1,115 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+/* =====================
+    NAVIGATION BAR
+====================== */
+nav {
+    background: #222;
+    position: sticky;/* Ngjitet në një pozicion kur bëhet scroll */
+    top: 0;
+    z-index: 1;/* Siguron që nav të jetë mbi elementet e tjera,vlerat pozitive dalin mbi ,ndersa vlerat negative mbesin nen  */
+}
+.nav-container {
+    display: flex;/* Përdor Flexbox për të rreshtuar elementet në një rresht */
+    justify-content: space-between;/* Vendos logon në të majtë dhe menunë në të djathtë */
+    align-items: center;/* Qëndron vertikalisht në qendër */
+    padding: 10px 20px;/* Shton pak hapësirë rreth elementeve */
+}
+.logo {
+    color: white;
+    font-weight: bold; /* Bën font të trashë */
+    font-size: 18px;
+}
+nav ul {
+    list-style: none;/* Heq pikën e listës */
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+nav ul li a {
+    color: white;
+    padding: 10px 15px;
+    display: block;
+    text-decoration: none;
+    transition: background 0.9s, color 0.3s; /*Shton një efekt tranzicioni për ngjyrën e sfondit dhe tekstit */
+}
+nav ul li a:hover {
+    background: orange;
+    color: black;
+}
+/* =====================
+POSITION SECTION
+====================== */
+/* Kontejneri kryesor që përmban div-at e tjerë */
+.conteiner {
+	width: 500px; /* Gjerësia e kontejnerit */
+	height: 2075px; /* Lartësia e kontejnerit */
+	background-color: grey; 
+	border: 1px solid red; /* Kufiri i kuq rreth kontejnerit */
+    position: absolute;
+    top:0 ;
+    /* Pozicioni fillestar, elementet brenda do të jenë në rrjedhën normale */
+}
+/* Div-i i parë brenda kontejnerit */
+#div1 {
+	background-color: orange;
+	width: 100px; /* Gjerësia */
+	height: 100px; /* Lartësia */
+	border: 3px solid red; /* Kufiri i trashë dhe i kuq */
+}
+/* Div-i i dytë me pozicion relativ */
+#div2 {
+	background-color: yellow; 
+	width: 100px;
+	height: 100px;
+	border: 3px solid red;
+	position: relative; /* Lejon zhvendosjen nga pozicioni fillestar */
+	top: 5px; /* Zhvendoset 5px poshtë */
+	left: 5px; /* Zhvendoset 5px në të djathtë */
+}
+/* Div-i i tretë, i thjeshtë me ngjyrë blu dhe tekst të bardhë */
+#div3 {
+	background-color: blue; 
+	width: 100px;
+	height: 100px;
+	border: 3px solid red;
+	position: absolute; /* Lejon zhvendosjen nga pozicioni fillestar , dhe e leshon vendin e tij per elementet e tjera*/
+	top: 50px; /* Zhvendoset 5px poshtë */
+	left: 80px; /* Zhvendoset 5px në të djathtë */
+	color: white; /* Ngjyra e tekstit është e bardhë */
+}
+/* Div me pozicion 'fixed', gjithmonë qëndron në të njëjtin vend në ekran */
+#divfixed {
+	width: 300px;
+	border: 1px solid white;
+	background-color: green;
+	position: fixed; /* Nuk ndjek scroll-in, qëndron i palëvizshëm */
+}
+/* =====================
+    ANIMATION
+====================== */
+.animate-box {
+    width: 60px;
+    height: 60px;
+    background: purple;
+    position: relative;/* Lejon zhvendosjen nga pozicioni fillestar */
+    animation: move 2s infinite alternate;/* Aplikon animacionin "move" që zgjat 2 sekonda, përsëritet pafundësisht dhe alternon drejtimin në çdo cikël */
+    /*vlera e pare:keyframes,vlera e dyte:duraction,vlera e trete:timing function,
+	vlera e kater:delay vlera e peste:iteration count,vlera e gjashte:direction*/
+    margin: 40px auto;
+}
+.animate-box:hover {
+     animation-play-state:paused; /* ndalon animacionin në hover,()running */
+}
+@keyframes move {/* Definimi i animacionit me emrin "move" */
+    from {/* starti i animacionit */
+        top: 0;
+        opacity: 0.5; /* Fillon me një transparencë të ulët */
+    }
+    to {/* fundi i animacionit */
+        top: 150px;
+        opacity: 1;
+    }
+}

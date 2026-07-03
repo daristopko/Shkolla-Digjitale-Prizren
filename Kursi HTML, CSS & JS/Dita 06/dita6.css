@@ -1,0 +1,132 @@
+/* ===== BOX STYLE ===== */
+/* Krijon kuti me ngjyre, padding dhe tekst ne mes */
+.box{
+    background:#6366f1; /* ngjyre e lehte blu */
+    color:white;       /* teksti ne te bardhe */
+    padding:20px;      /* hapsire brenda kutise */
+    text-align:center; /* tekst i qendruar ne mes */
+    border-radius:8px; /* qoshe te rrumbullakosura */
+}
+/* ===================================== */
+/* 2️⃣ MAIN AXIS - Default Row */
+/* Flexbox ne rresht horizontal (row) */
+.container1{
+    display:flex;      /* aktivizon Flexbox */
+    gap:10px;          /* hapesire midis elementeve */
+    padding:10px;      /* hapesire brenda container */
+    background:#e0e7ff; /* ngjyre sfondi */
+}
+/* ===================================== */
+/* 3️⃣ JUSTIFY CONTENT */
+/* Pozicionon elementet horizontalisht ne container */
+.container2{
+    display:flex;            /* aktivizon Flexbox */
+    justify-content:space-between; /* nder elemente, maksimum distancë */
+    gap:10px;                /* hapesire midis elementeve */
+    padding:10px;
+    background:#e0e7ff;
+}
+/* ===================================== */
+/* 4️⃣ ALIGN ITEMS */
+/* Pozicionon elementet vertikalisht ne container */
+.container3{
+    display:flex;      /* aktivizon Flexbox */
+    align-items:center; /* i vendos ne mes vertikalisht */
+    height:150px;      /* lartesia e container */
+    gap:10px;
+    padding:10px;
+    background:#e0e7ff;
+}
+/* ===================================== */
+/* 5️⃣ FLEX WRAP */
+/* Elementet kalojne ne rresht te ri nese nuk ka hapesire */
+.container4{
+    display:flex;
+    flex-wrap:wrap; /* aktivizon rreshtim ne linja te reja */
+    gap:10px;
+    padding:10px;
+    background:#e0e7ff;
+}
+.container4 .box{
+    width:150px; /* secila kuti ka gjeresi fikse 150px */
+    /* Zgjidh çdo element me klasën .box brenda .container4 */
+}
+/* ===================================== */
+/* 6️⃣ FLEX PROPERTY */
+/*flex-direction: row | column | row-reverse | column-reverse;*/
+.container5{
+    display:flex;
+    gap:10px;
+    padding:10px;
+    background:#e0e7ff;
+    flex-direction: column; /* rresht vertical */
+}
+/* Media Queries*/
+  /* Stili bazik për të gjitha pajisjet */
+.s1 {
+    padding: 50px;
+    background-color: white;
+    text-align: center;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+/* Klasë për elementet brenda .s1 */
+.element {
+    margin: 10px 0;
+    font-size: 24px;
+    color: black;
+
+}
+/* --- Media Queries --- */
+/* Celular të vegjël (max-width: 480px) */
+@media only screen and (max-width: 480px) {
+    .s1 {
+        padding: 20px;
+    }
+    .element {
+        font-size: 16px;
+        color: #721c24;
+    }
+}
+/* Celular i madh (481px - 768px) */
+@media only screen and (min-width: 481px) and (max-width: 768px) {
+    .s1 {
+        padding: 30px;
+    }
+    .element {
+        font-size: 18px;
+        color: #0c5460;
+    }
+}
+/* Tablet (769px - 1024px) */
+@media only screen and (min-width: 769px) and (max-width: 1024px) {
+    .s1 {
+        padding: 40px;   
+    }
+    .element {
+        font-size: 20px;
+        color: #856404;
+    }
+}
+/* Laptop (1025px - 1440px) */
+@media only screen and (min-width: 1025px) and (max-width: 1440px) {
+    .s1 {
+        padding: 50px;
+        display: flex;
+        flex-direction: row;
+    }
+    .element  {
+        font-size: 24px;
+        color: #155724;
+    }
+}
+/* Desktop i madh (1441px e më shumë) */
+@media only screen and (min-width: 1441px) {
+    .s1 {
+        padding: 60px;
+    }
+    .element {
+        font-size: 28px;
+        color: #004085;
+    }
+}

@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>DarisOS</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+
+    <body>
+        <div id="desktop">
+            <div class="window" id="window-calculator" style="top: 140px; left: 200px; display: none;">
+                <div class="window-titlebar">
+                    <span class="window-title">Calculator</span>
+                    <button class="window-close">✕</button>
+                </div>
+
+                <div class="window-content">
+                    <div id="calc-display">0</div>
+                    <div id="calc-buttons">
+                        
+                        <button class="calc-btn calc-btn-clear">C</button>
+                        <button class="calc-btn">+/-</button>
+                        <button class="calc-btn">%</button>
+                        <button class="calc-btn calc-btn-operator">÷</button>
+
+                        
+                        <button class="calc-btn">7</button>
+                        <button class="calc-btn">8</button>
+                        <button class="calc-btn">9</button>
+                        <button class="calc-btn calc-btn-operator">×</button>
+
+                        
+                        <button class="calc-btn">4</button>
+                        <button class="calc-btn">5</button>
+                        <button class="calc-btn">6</button>
+                        <button class="calc-btn calc-btn-operator">−</button>
+
+                        
+                        <button class="calc-btn">1</button>
+                        <button class="calc-btn">2</button>
+                        <button class="calc-btn">3</button>
+                        <button class="calc-btn calc-btn-operator">+</button>
+
+                        
+                        <button class="calc-btn calc-btn-zero">0</button>
+                        <button class="calc-btn">.</button>
+                        <button class="calc-btn calc-btn-operator">=</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="window" id="window-notepad" style="top: 200px; left: 360px; display: none;">
+                <div class="window-titlebar">
+                    <span class="window-title">Notepad</span>
+                    <button class="window-close">✕</button>
+                </div>
+
+                <div class="window-content">
+                    <textarea id="notepad-area"></textarea>
+                </div>
+            </div>
+
+            <div class="window" id="window-clock" style="top: 340px; left: 600px; display: none;">
+                <div class="window-titlebar">
+                    <span class="window-title">Clock</span>
+                    <button class="window-close">✕</button>
+                </div>
+
+                <div class="window-content">
+                    <div id="clock-display"></div>
+                </div>
+            </div>
+            
+            <div class="window" id="window-chatbot" style="top: 420px; left: 400px; display: none;">
+                <div class="window-titlebar">
+                    <span class="window-title">ChatBot</span>
+                    <button class="window-close">✕</button>
+                </div>
+
+                <div class="window-content">
+                    <div id="chat-messages"></div>
+                    <div id="chat-input-area">
+                        <input id="chat-input" type="text" placeholder="Ask me anything...">
+                        <button id="chat-send">Send</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="start-menu">
+            <div class="start-menu-item">
+                <span class="start-menu-icon">🤖</span>
+                <span class="start-menu-label">ChatBot</span>
+            </div>
+        </div>
+
+        <div id="taskbar">
+            <div id="start-btn"></div>
+            <div id="taskbar-apps">
+                <button class="taskbar-icon calc" data-target="window-calculator"></button>
+                <button class="taskbar-icon notepad" data-target="window-notepad"></button>
+                <button class="taskbar-icon clock" data-target="window-clock"></button>
+            </div>
+            <div id="clock"></div>
+        </div>
+
+        <script src="script.js"></script>
+    </body>
+</html>

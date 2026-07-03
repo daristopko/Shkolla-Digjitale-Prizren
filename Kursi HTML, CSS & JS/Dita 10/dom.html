@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>DOM Manipulation</title>
+    <style>
+        .highlight {
+            color: red;
+            font-weight: bold;
+        }
+
+        .box {
+            width: 200px;
+            height: 100px;
+            background: lightblue;
+            margin: 10px auto;
+            text-align: center;
+            line-height: 100px;
+        }
+    </style>
+</head>
+<body>
+    <h1 id="title">DOM Examples</h1>
+
+    <input type="text" id="nameInput" placeholder="Shkruaj emrin">
+    
+    <button id="changeTextBtn">Ndrysho Tekstin</button>
+
+    <button id="changeColorBtn">Ndrysho Ngjyrën</button>
+
+    <button id="toggleClassBtn">Toggle Class</button>
+
+    <button id="createElementBtn">Krijo Element</button>
+
+    <div class="box" id="box">BOX</div>
+
+    <ul id="list"></ul>
+
+    <script>
+        // SELECT ELEMENTS
+        const title = document.getElementById("title");
+        const nameInput = document.getElementById("nameInput");
+        const changeTextBtn = document.getElementById("changeTextBtn");
+        const changeColorBtn = document.getElementById("changeColorBtn");
+        const toggleClassBtn = document.getElementById("toggleClassBtn");
+        const createElementBtn = document.getElementById("createElementBtn");
+        const box = document.getElementById("box");
+        const list = document.getElementById("list");
+
+        // Change Text
+        changeTextBtn.addEventListener("click", function() {
+            const name = nameInput.value;
+
+            if (name === "") {
+                alert("Ju lutem shkruani nje Emer!");
+                return;
+            }
+            title.textContent = "Pershendetje, " + name;
+        });
+
+        changeColorBtn.addEventListener("click", function() {
+            title.style.color = "blue";
+            title.style.fontSize = "30px";
+        });
+
+        // =========================
+        // Toggle CSS Class
+        // =========================
+        toggleClassBtn.addEventListener("click", function() {
+            box.classList.toggle("highlight");
+        });
+
+        // =========================
+        // Create New Element
+        // =========================
+        createElementBtn.addEventListener("click", function() {
+            const li = document.createElement("li");
+            li.textContent = "Element i ri";
+            list.appendChild(li);
+        });
+
+        // =========================
+        // Mouse Event
+        // =========================
+        box.addEventListener("mouseover", function() {
+            box.style.backgroundColor = "orange";
+        });
+
+        box.addEventListener("mouseout", function() {
+            box.style.backgroundColor = "lightblue";
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Basics - Detyre UI (User-Interface)</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>CSS Basics - Detyre UI (User-Interface)</h1>
+        </header>
+
+        <!-- Profile Card -->
+        <div class="card profile-card">
+            <div class="profile-image">
+                <img src="daris.jpg" alt="Profile Picture">
+            </div>
+            <h2>Daris Topko</h2>
+            <p class="subtitle">Student of Digital School | Prizren</p>
+            <div class="social-icons">
+                <a href="https://www.instagram.com/daris.t10/" target="_blank"><i class="fab fa-instagram"></i></a>
+                <a href="snapcode.svg" target="_blank"><i class="fab fa-snapchat"></i></a>
+                <a href="https://discordapp.com/users/916038678621610057" target="_blank"><i class="fab fa-discord"></i></a>
+                <a href="https://www.tiktok.com/@daris.topko" target="_blank"><i class="fab fa-tiktok"></i></a>
+            </div>
+        </div>
+
+        <!-- Product Card -->
+        <div class="card product-card">
+            <img src="ram.webp" alt="Corsair VENGEANCE RGB 64GB (2×32GB) DDR5‑6000 MHz">
+            <h3>Corsair VENGEANCE RGB 64GB (2×32GB) DDR5‑6000 MHz</h3>
+            <p class="price">$854.99</p>
+            <button class="btn-buy">Buy Now</button>
+        </div>
+
+        <!-- Login Card -->
+        <div class="card login-card">
+            <h3><i class="fas fa-user"></i> Login</h3>
+            <form id="loginForm">
+                <input type="email" id="email" placeholder="Email" required>
+                <input type="password" id="password" placeholder="Password" required>
+                <button type="submit" class="btn-login">Login</button>
+            </form>
+        </div>
+
+        <!-- Success Message -->
+        <div class="success-message" id="successMessage">
+            <b>Success</b>
+            <p>Your action was successful</p>
+        </div>
+
+        <script>
+            document.getElementById('loginForm').addEventListener('submit', function(e) {
+                e.preventDefault(); // Prevent default form submission
+    
+                const email = document.getElementById('email').value.trim();
+                const password = document.getElementById('password').value.trim();
+    
+                 // Check if both fields are filled
+                if (email && password) {
+                    // Show success message
+                    const successMessage = document.getElementById('successMessage');
+                    successMessage.style.display = 'block';
+        
+                 // Optional: Hide success message after 3 seconds
+                setTimeout(function() {
+                    successMessage.style.display = 'none';
+                }, 3000);
+        
+                // Optional: Reset form
+                document.getElementById('loginForm').reset();
+            }
+        });
+        </script>
+
+        <style>
+            .success-message {
+            display: none; /* Hidden by default */
+        }
+        </style>
+
+        <!-- Footer Section -->
+        <footer>
+            <h2>Welcome to my Website</h2>
+            <p>This is a Website coded in HTML & CSS with practical UI examples.</p>
+        <hr>
+            <p class="second-paragraph">&copy Copyright 2026</p>
+        </footer>
+    </div>
+</body>
+</html>

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Objects</title>
+</head>
+<body>
+    <h1>JavaScript Objects</h1>
+    <button onclick="showUser()">Shfaqe User</button>
+    <button onclick="increaseAge()">Rrite Moshen</button>
+    <button onclick="decreaseAge()">Ule Moshen</button>
+    <button onclick="showProduct()">Shfaqe Produktin</button>
+    <div id="output"></div>
+    <script>
+        // OBJECT 1 - Basic Object
+        const user = {
+            name: "Daris",
+            age: 15,
+            city: "Prizren"
+        };
+        document.write("Emri eshte: " + user.name);
+        function showUser() {
+            document.getElementById("output").innerHTML =
+                "Emri: " + user.name + "<br>" +
+                "Mosha: " + user.age + "<br>" +
+                "Qyteti: " + user.city;
+        }
+
+        function increaseAge() {
+            user.age++;
+            showUser();
+        }
+
+        function decreaseAge() {
+            user.age--;
+            showUser();
+        }
+        // OBJECT 2 - Me Method
+        const calculator = {
+            add(a, b) {
+                return a + b;
+            },
+            multiply(a, b) {
+                return a * b;
+            },
+            subtract(a, b) {
+                return a - b;
+            },
+            divide(a, b) {
+                return a / b;
+            }        
+        };
+        document.write("<br>");
+        document.write("Add: " + calculator.add(5, 3) + "<br>");
+        document.write("Multiply: " + calculator.multiply(4, 3) + "<br>");
+        document.write("Subtract: " + calculator.subtract(10, 8) + "<br>");
+        document.write("Divide: " + calculator.divide(8, 2) + "<br>");
+    </script>
+</body>
+</html>

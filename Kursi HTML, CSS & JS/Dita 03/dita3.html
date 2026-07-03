@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8"><!--duhet te vendosim kur kemi karaktere speciale-->
+    <!-- Responsive Meta Tag , do te verehet kur mesojme css dhe bootstrap-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Ky tag bën që faqja të duket mirë në celular dhe tablet -->
+    <title>DIta 3</title>
+</head>
+<body>
+     <h2>HTML Form Example:</h2>
+            <form>
+                <label>Emri:</label><!-- label per etiketim te inputit -->
+                <input type="text" placeholder="Shkruaj emrin" maxlength="10" minlength="3" size="10"> <!-- placeholder eshte teksti brenda inputit minlength dhe maxlength jane gjatesite minimale dhe maksimale te inputit size eshte gjatesia vizuale e inputit -->
+                <br><br>
+                <label>Email:</label>
+                <input type="email" required> <!-- required ben te detyrueshem mbushjen e fushes -->
+                <br><br>
+                <label>Fjalëkalimi:</label>
+                <input type="password">
+                <br><br>
+                <label>Mosha:</label>
+                <input type="number">
+                <br><br>
+                <label>Data e lindjes:</label>
+                <input type="date">
+                <br><br>
+                <label>Ngjyra e preferuar:</label>
+                <input type="color">
+                <br><br>
+                <label>Koha e takimit:</label>
+                <input type="file">
+                <br><br>
+                <label>Vlerësimi:</label>
+                <input type="range">
+                <br><br>
+                <input type="submit" value="Dergo">
+                <input type="reset" value="Pastro">
+            </form>
+            <h2>Select+Options</h2>
+                <select><!-- krijon nje menu drop-down -->
+                    <option>Prizren</option><!-- krijon nje opsion ne menu -->
+                    <option>Pejë</option>
+                    <option>Prishtinë</option>
+                </select>
+                <h2>Semantic Elements</h2>
+                <header><!-- header per seksionin kryesor te faqes -->
+                        <h1>Faqja ime</h1>
+                </header>
+                <nav><!-- nav per menyn naviguese -->
+                    <a href="#">Home</a>
+                    <a href="#">About</a>
+                </nav>
+                <main><!-- main per permbajtjen kryesore -->
+                    <section><!-- section per nje seksion te veçante te permbajtjes -->
+                        <h2>Lajme</h2>
+                        <article><!-- article per nje artikull te veçante -->
+                        <p>Kjo është një artikull.</p>
+                        </article>
+                    </section>
+                </main>
+                <footer><!-- footer per fundin e faqes -->
+                    Copyright 2026
+                </footer>
+<hr style="height: 10px;background-color: red;">
+
+<h2>Shembull i navigimit dhe strukturës</h2>
+
+<header><!-- header për seksionin kryesor -->
+    <h1>Website Shembull</h1>
+</header>
+
+<nav><!-- menuja naviguese -->
+    <a href="index.html">Home</a><!-- Lidhje për faqen kryesore -->
+    <a href="about.html">About</a><!-- Lidhje për faqen rreth nesh -->
+    <a href="contact.html">Contact</a><!-- Lidhje për faqen e kontaktit -->
+</nav>
+<h2>3. HTML Entities</h2><!-- Entities përdoren për karaktere speciale në HTML -->
+<ul>
+    <li>&amp; shfaq &amp;</li>
+    <li>&lt; shfaq &lt;</li>
+    <li>&gt; shfaq &gt;</li>
+    <li>&quot; shfaq "</li>
+    <li>&#169; shfaq ©</li>
+</ul>
+<p>Shembuj:</p>
+<p>5 &lt; 10 dhe 10 &gt; 5</p>
+<p>Copyright 2026 &#169; Digital School</p>
+</body>
+</html>

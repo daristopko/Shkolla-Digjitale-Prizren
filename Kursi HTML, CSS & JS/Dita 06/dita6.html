@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="sq">
+   <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Mesimi CSS Flexbox dhe Media Queries</title>
+      <link rel="stylesheet" href="dita6.css">
+   </head>
+   <body>
+      <h1>MESIMI CSS FLEXBOX dhe Media Queries</h1>
+      <section>
+         <h2>1. Cfare eshte Flexbox?</h2>
+         <p>
+            Flexbox eshte nje sistem layout-i ne CSS qe na ndihmon te rreshtojme elementet
+            horizontalisht ose vertikalisht ne menyre te thjeshte.
+            Per ta aktivizuar perdorim:
+         </p>
+         <pre>
+            display: flex;
+        </pre>
+      </section>
+      <section>
+         <h2>2. Boshti Kryesor (Main Axis)</h2>
+         <p>By default, elementet rreshtohen horizontalisht (row).</p>
+         <div class="container1">
+            <div class="box">1</div>
+            <div class="box">2</div>
+            <div class="box">3</div>
+         </div>
+      </section>
+      <section>
+         <h2>3. justify-content</h2>
+         <p>
+            Kontrollon pozicionimin horizontal te elementeve.
+            Vlera kryesore: flex-start, center, space-between, space-around, space-evenly
+         </p>
+         <div class="container2">
+            <div class="box">A</div>
+            <div class="box">B</div>
+            <div class="box">C</div>
+         </div>
+      </section>
+      <section>
+         <h2>4. align-items</h2>
+         <p>Kontrollon pozicionimin vertikal.</p>
+         <div class="container3">
+            <div class="box">1</div>
+            <div class="box">2</div>
+            <div class="box">3</div>
+         </div>
+      </section>
+      <section>
+         <h2>5. flex-wrap</h2>
+         <p>Kur nuk ka hapesire te mjaftueshme, elementet kalojne ne rresht te ri.</p>
+         <div class="container4">
+            <div class="box">1</div>
+            <div class="box">2</div>
+            <div class="box">3</div>
+            <div class="box">4</div>
+            <div class="box">5</div>
+         </div>
+      </section>
+      <section>
+         <h2>6. flex direction</h2>
+         <p>flex-direction: row | column | row-reverse | column-reverse;</p>
+         <div class="container5">
+            <div class="box">1</div>
+            <div class="box">2</div>
+            <div class="box">3</div>
+         </div>
+      </section>
+      <section class="s1">
+         <p>Media Queris eshte pjesa e faqes qe ndryshon stilin sipas madhesise se ekranit</p>
+         <h1 class="element">Footer</h1>
+         <p class="element">Footer eshte pjesa e fundit e faqes qe permban informacione te rrethimit</p>
+         <button class="element">Kliko këtu</button>
+      </section>
+   </body>
+</html>

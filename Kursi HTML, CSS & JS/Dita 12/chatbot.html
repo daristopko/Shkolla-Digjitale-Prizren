@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Chat i Thjeshtë</title>
+
+  <!-- Shtojmë stilin këtu -->
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f0f2f5;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+    }
+
+    .container {
+      background: white;
+      width: 400px;
+      padding: 15px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.2);
+    }
+
+    h2 {
+      text-align: center;
+      margin-top: 0;
+      color: #333;
+    }
+
+    #chat {
+      height: 350px;
+      overflow-y: auto;
+      border: 1px solid #ccc;
+      padding: 10px;
+      border-radius: 8px;
+      background: #f9f9f9;
+      margin-bottom: 10px;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .message {
+      max-width: 75%;
+      margin: 6px 0;
+      padding: 10px 14px;
+      border-radius: 15px;
+      line-height: 1.4;
+      font-size: 14px;
+    }
+
+    .ti {
+      background: #0084ff;
+      color: white;
+      align-self: flex-end;
+    }
+
+    .bot {
+      background: #e5e5ea;
+      color: black;
+      align-self: flex-start;
+    }
+
+    #input {
+      width: 70%;
+      padding: 10px;
+      font-size: 14px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+
+    button {
+      width: 25%;
+      padding: 10px;
+      font-size: 14px;
+      background-color: #0084ff;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      margin-left: 5px;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: #006fd6;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h2>Chat me Botin</h2>
+
+    <div id="chat"></div>
+
+    <input id="input" type="text" placeholder="Shkruaj këtu..." />
+    <button onclick="dergo()">Dërgo</button>
+  </div>
+
+  <script>
+    function dergo() {
+        var hyrja = document.getElementById("input");
+        var teksti = hyrja.value.toLowerCase();
+        var chat = document.getElementById("chat");
+
+        // Shfaq mesazhin e perdoruesit
+        chat.innerHTML += "<p class='message ti'><b>Ti:</b> " + teksti + "</p>";
+
+        // Përgjigja e bot-it
+        var pergjigje = "";
+        if (teksti.includes("Si je?")) {
+            pergjigje = "Mirë, Faleminderit!";
+        } else if (teksti.includes("Sa bejn 3+3?")) {
+            pergjigje = "3+3 = 6.";
+        } else if (teksti.includes("Qka je ti?")) {
+            pergjigje = "Unë jam një bot i thjeshtë.";
+        } else {
+            pergjigje = "Ju lutem shenoni qartë kerkesen juaj.";
+        }
+        chat.innerHTML += "<p class='message bot'><b>Bot:</b> " + pergjigje + "</p>";
+        hyrja.value = "";
+        chat.scrollTop = chat.scrollHeight;
+    }
+  </script>
+</body>
+</html>

@@ -1,0 +1,61 @@
+/*External Css*/
+#pid{ /*ID selector*/
+    /*vetia:vlera*/
+    color: blue;
+    background-color: lightgray;
+    width: 300px;
+    height: 50px;
+}
+#pid1{
+    color: white;
+    background-color: black;
+    width: 300px;
+}
+.pclass{/*Class selector*/
+    color: red;
+    background-color: yellow;
+    width: 200px;
+}
+
+/* Css Box Model*/
+.divbox{
+    background-color: lightgreen;/*ngjyra e prapavijes*/
+    width: 200px; /*gjeresia*/
+    height: 100px;/*lartesia*/
+    padding: 10px;/*hapesira e brendshme,kemi padding-left,padding-right,padding-top,padding-bottom*/
+    border: 5px solid black;/*kufiri*/
+    margin: 20px;/*hapesira e jashtme,kemi margin-left,margin-right,margin-top,margin-bottom*/
+    outline: 3px solid red;/*kufiri i jashtem*/
+    outline-offset: 5px;/*distanca nga kufiri i jashtem deri tek kufiri i brendshem*/
+}
+
+#p111{
+  font-family: "Grape Nuts", cursive;
+  font-weight: 400;
+  font-style: normal;
+}
+
+/*Css Text and Fonts*/
+.pgfonts{
+  font-family: "Playwrite NZ Basic Guides", cursive;
+  font-weight: 400;
+  font-style: normal;
+}
+
+/* Css Icons*/
+/* unvisited link */
+.a1:link {
+  color: red;
+}
+/* visited link */
+.a1:visited {
+  color: green;
+}
+/* mouse over link */
+.a1:hover {
+  color: hotpink;
+}
+/* selected link */
+.a1:active {
+  color: green
+}
