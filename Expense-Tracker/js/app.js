@@ -3,6 +3,9 @@ document.addEventListener("DOMContentLoaded", function () {
   if (document.getElementById("balance")) {
     updateSummary();
     renderTransactions();
+    renderCategoryChart();
+    renderMonthlyChart();
+    checkBudget();
     // Filters
     const searchInput = document.getElementById("search-input");
     const filterCategory = document.getElementById("filter-category");
@@ -34,6 +37,20 @@ document.addEventListener("DOMContentLoaded", function () {
         bootstrap.Modal.getInstance(document.getElementById("editModal")).hide();
         renderTransactions();
         updateSummary();
+        renderCategoryChart();
+        renderMonthlyChart();
+        checkBudget();
+      });
+    }
+
+    // Save budget
+    const saveBudgetBtn = document.getElementById("save-budget-btn");
+    if (saveBudgetBtn) {
+      saveBudgetBtn.addEventListener("click", function () {
+        const amount = parseFloat(document.getElementById("budget-input").value);
+        if (isNaN(amount) || amount < 0) return;
+        saveBudget(amount);
+        checkBudget();
       });
     }
   }
