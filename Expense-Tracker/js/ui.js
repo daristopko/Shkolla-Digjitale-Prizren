@@ -167,3 +167,33 @@ function checkBudget() {
     warning.style.display = "none";
   }
 }
+
+function analyzeSavings() {
+  const result = document.getElementById("analysis-result");
+  if (!result) return;
+
+  const now = new Date();
+  const transactions = getTransactions().filter(t => t.type === "expense");
+
+  const cutoff = new Date(now.getFullYear(), now.getMonth() - 3, 1);
+  const recent = transactions.filter(t => new Date(t.date) >= cutoff);
+
+  if (recent.length === 0) {
+    result.textContent = "Nuk ka mjaftueshëm të dhëna për analizë.";
+    result.style.display = "block";
+    return;
+  }
+
+  const totals = {};
+  recent.forEach(t => {
+    totals[t.category] = (totals[t.category] || 0) + t.amount;
+  });
+
+  const topCategory = Object.keys(totals).reduce((a, b) => totals[a] > totals[b] ? a : b);
+  const topAmount = totals[topCategory];
+  const monthlyAvg = topAmount / 3;
+  const suggestedSaving = monthlyAvg * 0.2;
+
+  result.textContent = `Mund të kurseni rreth €${suggestedSaving.toFixed(2)} në muaj duke ulur shpenzimet në kategorinë "${topCategory}" (mesatarja mujore: €${monthlyAvg.toFixed(2)}).`;
+  result.style.display = "block";
+}

@@ -53,6 +53,10 @@ document.addEventListener("DOMContentLoaded", function () {
         checkBudget();
       });
     }
+    
+    // Analyze savings
+    const analyzeBtn = document.getElementById("analyze-btn");
+    if (analyzeBtn) analyzeBtn.addEventListener("click", analyzeSavings);
   }
 
   // Add Transaction page
