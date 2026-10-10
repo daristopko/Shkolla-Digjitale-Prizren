@@ -197,3 +197,15 @@ function analyzeSavings() {
   result.textContent = `Mund të kurseni rreth €${suggestedSaving.toFixed(2)} në muaj duke ulur shpenzimet në kategorinë "${topCategory}" (mesatarja mujore: €${monthlyAvg.toFixed(2)}).`;
   result.style.display = "block";
 }
+
+function applyTheme(theme) {
+  document.documentElement.setAttribute("data-bs-theme", theme);
+  localStorage.setItem("theme", theme);
+  const btn = document.getElementById("theme-toggle");
+  if (btn) btn.textContent = theme === "dark" ? "☀️ Light" : "🌙 Dark";
+}
+
+function toggleTheme() {
+  const current = document.documentElement.getAttribute("data-bs-theme");
+  applyTheme(current === "dark" ? "light" : "dark");
+}

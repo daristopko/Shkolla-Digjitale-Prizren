@@ -1,4 +1,7 @@
 document.addEventListener("DOMContentLoaded", function () {
+  applyTheme(localStorage.getItem("theme") || "light");
+  const themeBtn = document.getElementById("theme-toggle");
+  if (themeBtn) themeBtn.addEventListener("click", toggleTheme);
   // Dashboard
   if (document.getElementById("balance")) {
     updateSummary();
